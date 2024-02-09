@@ -1,0 +1,24 @@
+{% extends "core/base.html" %} {% block content %}
+
+<div class="grid grid-cols-5 gap-6">
+  <div class="col-span-3">
+    <img src="{{item.image.url}}" alt="" class="rounded-xl" />
+  </div>
+
+  <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
+    <h1 class="mb-5 text-3xl">{{item.name}}</h1>
+    <p class="mb-5">{{item.price}}</p>
+    <p class="mb-5">{{item.created_at}}</p>
+
+    {% if item.description %}
+
+    <p class="text-gray-700">
+      <strong class="text-gray-700"> Description </strong>
+      {{item.description}}
+    </p>
+
+    {% endif %}
+  </div>
+</div>
+
+{% endblock content %}
