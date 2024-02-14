@@ -31,5 +31,15 @@ class Item(models.Model):
 
 
 
+class Products(models.Model):
+     title = models.CharField(max_length=255)
+     price = models.FloatField()
+     desc = models.CharField(max_length=1000)
+
+
+     def __str__(self) -> str:
+        return self.title
+
+
 
     
